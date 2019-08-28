@@ -1,0 +1,78 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>{{ site.title }}</title>
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}" />
+
+    <link rel="canonical" href="{{ site.url }}" />
+    
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="content-wrapper">
+
+            <div class="content" >
+
+                <section class="intro">
+                    
+                    <a id="content"></a>
+                    <h1>Hi, I'm Henning Dodenhof!</h1>
+                    <h2 class="tagline">Software engineer, open-source maintainer, remote work advocate.</h2>
+
+                </section>
+
+                <section class="bio">
+
+                    <!-- TODO -->
+                    <p>&nbsp;</p>
+
+                </section>
+                
+                <section class="links">
+
+                    <ul>
+
+                        {% include social-link.html url="https://blog.hdodenhof.de" title="Personal Blog" icon="ic-blog" %}
+
+                        {% include social-link.html url="https://twitter.com/hdodenhof" title="Twitter" icon="ic-twitter" %}
+
+                        {% include social-link.html url="https://github.com/hdodenhof" title="GitHub" icon="ic-github" %}
+
+                        {% include social-link.html url="https://stackoverflow.com/users/1968123/henning-dodenhof" title="Stack Overflow" icon="ic-stackoverflow" %}
+
+                        {% include social-link.html url="https://www.linkedin.com/in/henningdodenhof" title="LinkedIn" icon="ic-linkedin" %}
+
+                        {% include social-link.html url="https://www.xing.com/profile/Henning_Dodenhof" title="XING" icon="ic-xing" %}
+
+                    </ul>
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <div class="image-wrapper">
+
+            <a class="arrow-down" href="#content">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" id="ic-blog"><path d="M 95.889941,22.949314 99.999999,27.059372 50.00273,77.059124 0,27.050437 4.1100582,22.940876 50.005708,68.836525 Z" /></svg>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>

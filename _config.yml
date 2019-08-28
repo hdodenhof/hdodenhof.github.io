@@ -1,0 +1,6 @@
+url: https://hdodenhof.de
+baseurl: ''
+title: Henning Dodenhof
+
+sass:
+  style: compressed

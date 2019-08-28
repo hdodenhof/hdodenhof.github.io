@@ -1,0 +1,214 @@
+$background-color: #fff;
+$text-color: #45484d;
+$highlight-color: #f26a3d;
+
+$h1-font-size-regular: 32pt;
+$h1-font-size-small: 28pt;
+$h2-font-size-regular: 14pt;
+$h2-font-size-small: 13pt;
+$text-font-size-regular: 14pt;
+$text-font-size-small: 13pt;
+
+$bio-margin-regular: 64px;
+$bio-margin-small: 48px;
+
+$social-icon-dimen-regular: 48px;
+$social-icon-dimen-small: 32px;
+
+@import 'animations';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap);
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.image-wrapper {
+  width: 50%;
+  height: 100vh;
+  background-image: url(../henningdodenhof.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.arrow-down {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  top: 90vh;
+  left: 50%;
+  margin-left: -16px;
+  animation: arrow-highlight 2s infinite;
+  svg {
+    fill: #fff;
+  }
+  display: none;
+}
+
+.content-wrapper {
+  width: 50%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.content {
+  padding: 0 10%;
+  max-width: 600px;
+  margin: auto 0;
+  h1 {
+    font-size: $h1-font-size-regular;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: $h2-font-size-regular;
+    font-weight: 400;
+    margin-top: 8px;
+  }
+}
+
+.bio {
+  margin: $bio-margin-regular 0;
+  font-size: $text-font-size-regular;
+  font-weight: 300;
+  line-height: 1.3;
+  text-decoration: none;
+  a {
+    color: $text-color;
+    text-decoration: none;
+    border-bottom: 1px solid $highlight-color;
+    transition-duration: 0.25s;
+    &:hover {
+      color: $highlight-color;
+    }
+  }
+}
+
+.links {
+  position: relative;
+  display: flex;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin-right: 24px;
+    margin-bottom: 16px;
+    float: left;
+    svg {
+      width: $social-icon-dimen-regular;
+      height: $social-icon-dimen-regular;
+      fill: #999;
+      transition-duration: 0.5s;
+      &:hover {
+        transition-duration: 0.25s;
+      }
+      &#ic-github:hover {
+        fill: #24292e;
+      }
+      &#ic-twitter:hover {
+        fill: #1da1f2;
+      }
+      &#ic-xing:hover {
+        fill: #009090;
+      }
+      &#ic-linkedin:hover {
+        fill: #0077b5;
+      }
+      &#ic-stackoverflow:hover {
+        fill: #f48024;
+      }
+      &#ic-blog:hover {
+        fill: #141414;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .content {
+    h1 {
+      font-size: $h1-font-size-small;
+    }
+    h2 {
+      font-size: $h2-font-size-small;
+    }
+  }
+  .bio {
+    font-size: $text-font-size-small;
+    margin: $bio-margin-small 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .image-wrapper {
+    width: 100%;
+  }
+  .arrow-down {
+    display: block;
+  }
+  .content-wrapper {
+    width: 100%;
+    height: auto;
+    order: 1;
+  }
+  .content {
+    h1 {
+      font-size: $h1-font-size-regular;
+    }
+    h2 {
+      font-size: $h2-font-size-regular;
+    }
+  }
+  .bio {
+    font-size: $text-font-size-regular;
+    margin: $bio-margin-regular 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-wrapper {
+    height: 60vh;    
+  }
+  .arrow-down {
+    display: none;
+  }  
+  .content {
+    h1 {
+      font-size: $h1-font-size-small;
+    }
+    h2 {
+      font-size: $h2-font-size-small;
+    }
+  }
+  .bio {
+    font-size: $text-font-size-small;
+    margin: $bio-margin-small 0;
+  }
+  .links li {
+    margin-right: 18px;
+    svg {
+      width: $social-icon-dimen-small;
+      height: $social-icon-dimen-small;
+    }
+  }
+}
