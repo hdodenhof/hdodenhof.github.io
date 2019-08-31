@@ -40,15 +40,15 @@ body {
   background-image: url(../henningdodenhof.jpg);
   background-position: center center;
   background-size: cover;
+  display: flex;
+  justify-content: center;
 }
 
 .arrow-down {
-  position: relative;
+  align-self: flex-end;
+  margin-bottom: 32px;
   width: 32px;
   height: 32px;
-  top: 90vh;
-  left: 50%;
-  margin-left: -16px;
   animation: arrow-highlight 2s infinite;
   svg {
     fill: #fff;
