@@ -1,6 +1,5 @@
 $background-color: #fff;
 $text-color: #45484d;
-$highlight-color: #f26a3d;
 
 $h1-font-size-regular: 32pt;
 $h1-font-size-small: 28pt;
@@ -8,9 +7,6 @@ $h2-font-size-regular: 14pt;
 $h2-font-size-small: 13pt;
 $text-font-size-regular: 14pt;
 $text-font-size-small: 13pt;
-
-$bio-margin-regular: 64px;
-$bio-margin-small: 48px;
 
 $social-icon-dimen-regular: 48px;
 $social-icon-dimen-small: 32px;
@@ -81,21 +77,8 @@ body {
   }
 }
 
-.bio {
-  margin: $bio-margin-regular 0;
-  font-size: $text-font-size-regular;
-  font-weight: 300;
-  line-height: 1.3;
-  text-decoration: none;
-  a {
-    color: $text-color;
-    text-decoration: none;
-    border-bottom: 1px solid $highlight-color;
-    transition-duration: 0.25s;
-    &:hover {
-      color: $highlight-color;
-    }
-  }
+.intro {
+  margin-bottom: 64px;
 }
 
 .links {
@@ -149,10 +132,6 @@ body {
       font-size: $h2-font-size-small;
     }
   }
-  .bio {
-    font-size: $text-font-size-small;
-    margin: $bio-margin-small 0;
-  }
 }
 
 @media (max-width: 900px) {
@@ -179,10 +158,6 @@ body {
       font-size: $h2-font-size-regular;
     }
   }
-  .bio {
-    font-size: $text-font-size-regular;
-    margin: $bio-margin-regular 0;
-  }
 }
 
 @media (max-width: 600px) {
@@ -200,9 +175,8 @@ body {
       font-size: $h2-font-size-small;
     }
   }
-  .bio {
-    font-size: $text-font-size-small;
-    margin: $bio-margin-small 0;
+  .intro {
+    margin-bottom: 32px;
   }
   .links li {
     margin-right: 18px;
