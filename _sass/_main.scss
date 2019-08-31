@@ -124,17 +124,6 @@ body {
   }
 }
 
-@media (max-width: 1200px) {
-  .content {
-    h1 {
-      font-size: $h1-font-size-small;
-    }
-    h2 {
-      font-size: $h2-font-size-small;
-    }
-  }
-}
-
 @media (max-width: 900px) {
   .wrapper {
     height: auto;
@@ -150,14 +139,6 @@ body {
     width: 100%;
     height: auto;
     order: 1;
-  }
-  .content {
-    h1 {
-      font-size: $h1-font-size-regular;
-    }
-    h2 {
-      font-size: $h2-font-size-regular;
-    }
   }
 }
 
