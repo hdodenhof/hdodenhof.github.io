@@ -2,9 +2,9 @@ $background-color: #fff;
 $text-color: #45484d;
 
 $h1-font-size-regular: 32pt;
-$h1-font-size-small: 28pt;
+$h1-font-size-small: 18pt;
 $h2-font-size-regular: 14pt;
-$h2-font-size-small: 13pt;
+$h2-font-size-small: 12pt;
 $text-font-size-regular: 14pt;
 $text-font-size-small: 13pt;
 
@@ -144,12 +144,21 @@ body {
 
 @media (max-width: 600px) {
   .image-wrapper {
-    height: 60vh;    
+    height: 100vh;
   }
   .arrow-down {
     display: none;
+  }
+  .content-wrapper {
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(#00000000 50%, #000000BB 80%);
   }  
   .content {
+    margin: 0 0 24px 0;
+    color: #fff;
     h1 {
       font-size: $h1-font-size-small;
     }
@@ -161,10 +170,15 @@ body {
     margin-bottom: 32px;
   }
   .links li {
-    margin-right: 18px;
+    margin-right: 12px;
+    margin-bottom: 8px;
     svg {
       width: $social-icon-dimen-small;
       height: $social-icon-dimen-small;
+      fill: #fff;
+      &:hover {
+        fill: #fff !important;
+      }
     }
   }
 }
