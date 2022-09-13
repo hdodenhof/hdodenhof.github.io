@@ -12,7 +12,22 @@ $social-icon-dimen-regular: 48px;
 $social-icon-dimen-small: 32px;
 
 @import 'animations';
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap);
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url('../fonts/opensans-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url('../fonts/opensans-semibold.ttf') format('truetype');
+}
 
 html {
    scroll-behavior: smooth;
